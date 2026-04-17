@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Applications';
+$this->title = 'Панель администратора - Все заявки';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="application-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Application', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Обновить', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
