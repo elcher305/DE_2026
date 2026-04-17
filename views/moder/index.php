@@ -9,7 +9,7 @@ use yii\grid\GridView;
 /** @var yii\web\View $this */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Заявки';
+$this->title = 'Applications';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="application-index">
@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Новое заявление', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Application', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
@@ -26,25 +26,12 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            //'id',
-            //'user_id',
+            'id',
+            'user_id',
             'car_number',
             'description:ntext',
-                [
-                        'attribute' => 'status',
-                        'value' => function($model) {
-                            return $model->statusLabel;
-                        },
-                ],
             'status',
-            'rejection_reason:ntext',
-                [
-                        'attribute' => 'rejection_reason',
-                        'label' => 'Причина отклонения',
-                        'value' => function($model) {
-                            return $model->rejection_reason ?: '-';
-                        },
-                ],
+            //'rejection_reason:ntext',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Application $model, $key, $index, $column) {

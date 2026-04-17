@@ -14,16 +14,16 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'user_id')->textInput() ?>
 
-    <?= $form->field($model, 'car_number')->textInput(['maxlength' => true])->label('Госномер автомобиля') ?>
+    <?= $form->field($model, 'car_number')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6])->label('Описание нарушения') ?>
+    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'status')->dropDownList([ 'new' => 'New', 'confirmed' => 'Confirmed', 'rejected' => 'Rejected', ], ['prompt' => '']) ?>
 
     <?= $form->field($model, 'rejection_reason')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Отправить заявление', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
