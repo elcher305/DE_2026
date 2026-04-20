@@ -38,10 +38,11 @@ class ModerController extends Controller
 
         $dataProvider = new ActiveDataProvider([
             'query' => Application::find(),
-            /*
+
             'pagination' => [
                 'pageSize' => 50
             ],
+            /*
             'sort' => [
                 'defaultOrder' => [
                     'id' => SORT_DESC,

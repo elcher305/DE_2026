@@ -30,21 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'user_id',
             'car_number',
             'description:ntext',
-                [
-                        'attribute' => 'status',
-                        'value' => function($model) {
-                            return $model->statusLabel;
-                        },
-                ],
             'status',
-            'rejection_reason:ntext',
-                [
-                        'attribute' => 'rejection_reason',
-                        'label' => 'Причина отклонения',
-                        'value' => function($model) {
-                            return $model->rejection_reason ?: '-';
-                        },
-                ],
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Application $model, $key, $index, $column) {

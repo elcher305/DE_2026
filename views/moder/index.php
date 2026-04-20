@@ -16,9 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Обновить', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
 
     <?= GridView::widget([
@@ -31,7 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'car_number',
             'description:ntext',
             'status',
-            //'rejection_reason:ntext',
+            'rejection_reason:ntext',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Application $model, $key, $index, $column) {
